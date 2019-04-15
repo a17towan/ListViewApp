@@ -2,8 +2,11 @@ package org.brohede.marcus.listviewapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String korv =new String("Cozmo");
+        Toast.makeText(getApplicationContext(), korv, Toast.LENGTH_SHORT).show();
 
         // The onCreate method is run when the app is created.
         // Before you can implement this you need to create the layout xml files that
@@ -47,5 +53,13 @@ public class MainActivity extends AppCompatActivity {
 
         ListView my_listview=(ListView) findViewById(R.id.my_listview);
         my_listview.setAdapter(adapter);
+
+        my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String korv =new String("Cozmo");
+                Toast.makeText(getApplicationContext(), korv, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
