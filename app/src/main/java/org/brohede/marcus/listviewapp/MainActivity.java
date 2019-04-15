@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String korv =new String("Cozmo");
+        String korv =new String("");
         Toast.makeText(getApplicationContext(), korv, Toast.LENGTH_SHORT).show();
 
         // The onCreate method is run when the app is created.
@@ -57,9 +57,10 @@ public class MainActivity extends AppCompatActivity {
         my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String korv =new String("Cozmo");
-                Toast.makeText(getApplicationContext(), korv, Toast.LENGTH_SHORT).show();
+                String korv =new String("");
+                Toast.makeText(getApplicationContext(), korv+"Name:"+mountainNames[i]+ "|Location:"+mountainLocations[i]+"|Mountain height:"+mountainHeights[i], Toast.LENGTH_SHORT).show();
             }
+            
         });
     }
 }
