@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
-        android:id="@+id/list_item_textview">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:id="@+id/my_listview">
     </ListView>
 </android.support.constraint.ConstraintLayout>
